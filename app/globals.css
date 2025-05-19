@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #204F8C;
+    --primary-dark: #1A4173;
+    --accent: #A68521;
+    --accent-secondary: #A67926;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-gray-50;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight text-gray-900;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-gray-900;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold text-gray-900;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold text-gray-900;
+  }
+
+  p {
+    @apply text-gray-600 leading-relaxed;
+  }
+
+  a {
+    @apply text-[#204F8C] hover:text-[#1A4173] transition-colors;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-[#204F8C] text-white hover:bg-[#1A4173] focus:ring-[#204F8C];
+  }
+
+  .btn-secondary {
+    @apply bg-[#A68521] text-white hover:bg-[#A67926] focus:ring-[#A68521];
+  }
+
+  .btn-accent {
+    @apply bg-[#A68521] text-white hover:bg-[#A67926] focus:ring-[#A68521];
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#204F8C] focus:border-transparent;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .section {
+    @apply py-12 md:py-16;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-center mb-8 text-gray-900;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-[#204F8C] transition-colors;
+  }
+
+  .nav-link.active {
+    @apply text-[#204F8C] font-medium;
+  }
+}
+
+@layer utilities {
+  .prose img {
+    @apply rounded-lg shadow-md;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

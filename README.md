@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# XI Seminário de Educação Física
 
-## Getting Started
+Portal oficial do XI Seminário de Educação Física, desenvolvido com Next.js 14, TypeScript e Tailwind CSS.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- PostCSS
+- @tailwindcss/typography
+- @tailwindcss/forms
+
+## Estrutura do Projeto
+
+```
+xiseminarioedfis/
+├── app/                    # Rotas e páginas
+├── components/            # Componentes reutilizáveis
+├── content/              # Conteúdo em JSON
+├── public/               # Arquivos estáticos
+├── styles/              # Estilos globais
+└── utils/               # Funções utilitárias
+```
+
+## Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/xiseminarioedfis.git
+cd xiseminarioedfis
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse http://localhost:3000 no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Gerenciamento de Conteúdo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O conteúdo do site é gerenciado através de arquivos JSON na pasta `content/`:
 
-## Learn More
+- `content/news/`: Notícias do evento
+- `content/workshops/`: Oficinas e minicursos
+- `content/gallery/`: Metadados da galeria de fotos
 
-To learn more about Next.js, take a look at the following resources:
+### Formato dos Arquivos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Notícias (`content/news/*.json`)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+{
+  "title": "Título da Notícia",
+  "date": "YYYY-MM-DD",
+  "content": "Conteúdo completo...",
+  "image": "/images/news/exemplo.jpg"
+}
+```
 
-## Deploy on Vercel
+#### Oficinas (`content/workshops/*.json`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```json
+{
+  "title": "Título da Oficina",
+  "date": "YYYY-MM-DD",
+  "time": "HH:MM",
+  "location": "Local",
+  "description": "Descrição...",
+  "image": "/images/workshops/exemplo.jpg",
+  "instructor": "Nome do Instrutor"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Galeria (`content/gallery/metadata.json`)
+
+```json
+{
+  "images": [
+    {
+      "url": "/images/gallery/exemplo.jpg",
+      "description": "Descrição da imagem"
+    }
+  ]
+}
+```
+
+## Scripts Disponíveis
+
+- `npm run dev`: Inicia o servidor de desenvolvimento
+- `npm run build`: Gera a versão de produção
+- `npm start`: Inicia o servidor de produção
+- `npm run lint`: Executa o linter
+
+## Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
+4. Push para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
+## Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.

@@ -30,11 +30,13 @@ const contentDir = path.join(process.cwd(), 'content');
 export async function getAllNews(): Promise<(NewsItem & { slug: string })[]> {
   const newsDir = path.join(contentDir, 'news');
   const files = await fs.readdir(newsDir);
-  const news = await Promise.all(files.map(async (file) => {
-    const slug = file.replace('.json', '');
-    const data = await fs.readFile(path.join(newsDir, file), 'utf8');
-    return { slug, ...(JSON.parse(data) as NewsItem) };
-  }));
+  const news = await Promise.all(
+    files.map(async file => {
+      const slug = file.replace('.json', '');
+      const data = await fs.readFile(path.join(newsDir, file), 'utf8');
+      return { slug, ...(JSON.parse(data) as NewsItem) };
+    })
+  );
   // Ordena por data decrescente (mais recentes primeiro)
   return news.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 }
@@ -53,11 +55,13 @@ export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
 export async function getAllWorkshops(): Promise<(WorkshopItem & { slug: string })[]> {
   const wsDir = path.join(contentDir, 'workshops');
   const files = await fs.readdir(wsDir);
-  const workshops = await Promise.all(files.map(async (file) => {
-    const slug = file.replace('.json', '');
-    const data = await fs.readFile(path.join(wsDir, file), 'utf8');
-    return { slug, ...(JSON.parse(data) as WorkshopItem) };
-  }));
+  const workshops = await Promise.all(
+    files.map(async file => {
+      const slug = file.replace('.json', '');
+      const data = await fs.readFile(path.join(wsDir, file), 'utf8');
+      return { slug, ...(JSON.parse(data) as WorkshopItem) };
+    })
+  );
   return workshops.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 }
 
@@ -73,5 +77,5 @@ export async function getWorkshopBySlug(slug: string): Promise<WorkshopItem | nu
 // Lê dados da galeria
 export async function getGalleryImages(): Promise<GalleryImage[]> {
   const data = await fs.readFile(path.join(contentDir, 'gallery', 'metadata.json'), 'utf8');
-  return (JSON.parse(data).images) as GalleryImage[];
-} 
+  return JSON.parse(data).images as GalleryImage[];
+}

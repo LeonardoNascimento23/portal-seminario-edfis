@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "url": "/images/gallery/foto1.jpg",
+      "description": "Palestrante durante palestra sobre inovação em Educação Física"
+    },
+    {
+      "url": "/images/gallery/foto2.jpg",
+      "description": "Participantes interagindo em oficina prática de treinamento funcional"
+    },
+    {
+      "url": "/images/gallery/foto3.jpg",
+      "description": "Vista externa do auditório principal do evento"
+    },
+    {
+      "url": "/images/gallery/foto4.jpg",
+      "description": "Equipe organizadora do XI Seminário de Educação Física"
+    },
+    {
+      "url": "/images/gallery/foto5.jpg",
+      "description": "Momento de debate em mesa-redonda sobre tendências da área"
+    },
+    {
+      "url": "/images/gallery/foto6.jpg",
+      "description": "Apresentação de pôsteres científicos durante o evento"
+    }
+  ]
+}

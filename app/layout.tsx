@@ -11,20 +11,16 @@ export const metadata: Metadata = {
   description: 'Portal oficial do XI Seminário de Educação Física',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-8">
+    <html lang="pt-BR" className="scroll-smooth">
+      <body className={inter.className}>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
           {children}
-        </main>
-        <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
-} 
+}
