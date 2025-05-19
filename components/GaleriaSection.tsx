@@ -87,26 +87,18 @@ const imagens = [
   }
 ];
 
-export default function GaleriaPage() {
+export default function GaleriaSection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold text-[#204F8C]">Galeria de Fotos</h1>
-          <Link 
-            href="/"
-            className="inline-block bg-[#204F8C] text-white px-6 py-3 rounded-lg hover:bg-[#1a3f6f] transition-colors duration-300"
-          >
-            Voltar para Home
-          </Link>
-        </div>
-
-        <p className="text-gray-600 mb-8">Confira os melhores momentos das edições anteriores do Seminário de Educação Física</p>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {imagens.map((imagem, index) => (
+    <section id="galeria" className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-8 text-[#204F8C] text-center">Galeria de Fotos</h2>
+        <p className="text-gray-600 text-center mb-8">Confira os melhores momentos das edições anteriores do Seminário de Educação Física</p>
+        
+        {/* Grid de preview com 6 imagens */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          {imagens.slice(0, 6).map((imagem, index) => (
             <div key={index} className="relative group aspect-square">
               <div 
                 className="overflow-hidden rounded-lg shadow-md h-full cursor-pointer"
@@ -116,7 +108,7 @@ export default function GaleriaPage() {
                   src={imagem.src}
                   alt={imagem.alt}
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"
                   className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -130,6 +122,16 @@ export default function GaleriaPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Botão para ver galeria completa */}
+        <div className="text-center">
+          <Link 
+            href="/galeria" 
+            className="inline-block bg-[#204F8C] text-white px-6 py-3 rounded-lg hover:bg-[#1a3f6f] transition-colors duration-300"
+          >
+            Ver Galeria Completa
+          </Link>
         </div>
 
         {selectedImage && (
@@ -158,6 +160,6 @@ export default function GaleriaPage() {
           </div>
         )}
       </div>
-    </main>
+    </section>
   );
-}
+} 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import Modal from '@/components/Modal';
 
 const oficinas = [
@@ -10,6 +11,7 @@ const oficinas = [
     descricao: 'Aprenda os fundamentos básicos do Beach Tennis, incluindo regras, técnicas e estratégias.',
     ministrante: 'Prof. João Silva',
     horario: '19:00',
+    data: '27/06/2025',
     local: 'Quadra de areia (ao lado do LABEF)',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe6YG2wcJDUKVIutGpAIbmMyKX4BoErlQzPraq-ggx0Zmov6Q/viewform?embedded=true',
     formHeight: 2968
@@ -18,8 +20,9 @@ const oficinas = [
     id: 2,
     titulo: 'Nutrição Esportiva Aplicada à Hipertrofia e Redução de Massa Gorda',
     descricao: 'Conheça os princípios da nutrição esportiva para ganho de massa muscular e perda de gordura.',
-    ministrante: 'Dra. Maria Santos',
+    ministrante: 'Prof. Maria Santos',
     horario: '19:00',
+    data: '27/06/2025',
     local: 'Sala 9 (FAED)',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfWYt5r3CGj46fO4h-bFU7tceJ-Lk2rZgLyuZwyy22Soo0FwA/viewform?embedded=true',
     formHeight: 2374
@@ -30,6 +33,7 @@ const oficinas = [
     descricao: 'Explore os elementos básicos da ginástica rítmica, incluindo aparelhos e coreografias.',
     ministrante: 'Prof. Ana Oliveira',
     horario: '19:00',
+    data: '27/06/2025',
     local: 'Laboratório de Atividades Rítmicas e Dança – LARDAN - (LABEF)',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdKMxTTzetNtxk02zXbSmnwxDq0hC-6aISWnVXDoV-KsHhjog/viewform?embedded=true',
     formHeight: 2616
@@ -40,6 +44,7 @@ const oficinas = [
     descricao: 'Descubra exercícios funcionais para melhorar a força, equilíbrio e coordenação.',
     ministrante: 'Professora Karla Mendes',
     horario: '19:00',
+    data: '27/06/2025',
     local: 'Quadra Poliesportiva – Unidade II da UFGD',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe3SYwwKbmhW8coOjZJRwFUivSx11bw3DkLOJPrtjCIQ2cdSA/viewform?embedded=true',
     formHeight: 2180
@@ -50,6 +55,7 @@ const oficinas = [
     descricao: 'Conheça diferentes modalidades de esportes de aventura e suas técnicas básicas.',
     ministrante: 'Prof. Pedro Costa',
     horario: '19:00',
+    data: '27/06/2025',
     local: 'Ao lado do LABEF',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSekKbjdBAUVqnj23RTbWEq0m7EoiJiYR5_CB89omI7BJrGb4Q/viewform?embedded=true',
     formHeight: 2909
@@ -139,14 +145,11 @@ const programacao = [
 
 export default function ProgramacaoPage() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedOficina, setSelectedOficina] = useState<typeof oficinas[0] | null>(null);
+  const [selectedOficina, setSelectedOficina] = useState<number | null>(null);
 
   const handleOpenModal = (oficinaId: number) => {
-    const oficina = oficinas.find(o => o.id === oficinaId);
-    if (oficina) {
-      setSelectedOficina(oficina);
-      setModalOpen(true);
-    }
+    setSelectedOficina(oficinaId);
+    setModalOpen(true);
   };
 
   const handleCloseModal = () => {
@@ -173,46 +176,64 @@ export default function ProgramacaoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container">
-        <h1 className="text-4xl font-bold text-center mb-8">Programação</h1>
-
-        <div className="space-y-12">
-          {programacao.map((dia) => (
-            <div key={dia.data} className="bg-white rounded-lg shadow-md p-6">
-              <h2 className="text-2xl font-semibold mb-6 text-[#204F8C]">
-                {formatarData(dia.data)}
-              </h2>
-
-              <div className="space-y-6">
-                {dia.eventos.map((evento, index) => (
-                  <div key={index} className="border-l-4 border-[#204F8C] pl-4">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-xl font-semibold text-[#204F8C]">
-                          {evento.titulo}
-                        </h3>
-                        <p className="text-gray-600 mt-1">{evento.descricao}</p>
-                        <div className="mt-2 space-y-1 text-gray-600">
-                          <p><strong>Horário:</strong> {evento.horario}</p>
-                          <p><strong>Local:</strong> {evento.local}</p>
-                          <p><strong>Tipo:</strong> {traduzirTipo(evento.tipo)}</p>
-                        </div>
-                      </div>
-                      {evento.tipo === 'workshop' && evento.oficinaId && (
-                        <button
-                          onClick={() => handleOpenModal(evento.oficinaId)}
-                          className="btn btn-accent"
-                        >
-                          Inscrever-se
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
+    <main className="py-12">
+      <div className="container max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-8 text-[#204F8C] text-center">Programação Completa</h1>
+        
+        {/* Segunda-feira */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-[#A68521]">Segunda-feira, 23 de Junho</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Cerimônia de Abertura</div>
+              <div className="col-span-3 text-gray-600">Auditório Principal</div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Terça a Quinta */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-[#A68521]">Terça a Quinta-feira, 24 a 26 de Junho</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">08:00 - 18:00</div>
+              <div className="col-span-7 text-gray-800">Apresentação de Estágios e TCC</div>
+              <div className="col-span-3 text-gray-600">Salas de Apresentação</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sexta-feira */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-[#A68521]">Sexta-feira, 27 de Junho</h2>
+          <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Oficina: Atividade Física Funcional</div>
+              <div className="col-span-3 text-gray-600">Quadra Poliesportiva – Unidade II da UFGD</div>
+            </div>
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Oficina: Esportes de Aventura</div>
+              <div className="col-span-3 text-gray-600">Ao lado do LABEF</div>
+            </div>
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Oficina: Ginástica Rítmica</div>
+              <div className="col-span-3 text-gray-600">Laboratório de Atividades Rítmicas e Dança – LARDAN - (LABEF)</div>
+            </div>
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Oficina: Introdução ao Beach Tennis</div>
+              <div className="col-span-3 text-gray-600">Quadra de areia (ao lado do LABEF)</div>
+            </div>
+            <div className="grid grid-cols-12 gap-4 items-center">
+              <div className="col-span-2 font-semibold text-[#204F8C]">19:00</div>
+              <div className="col-span-7 text-gray-800">Oficina: Nutrição Esportiva Aplicada à Hipertrofia e Redução de Massa Gorda</div>
+              <div className="col-span-3 text-gray-600">Sala 9 (FAED)</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -221,11 +242,11 @@ export default function ProgramacaoPage() {
         <Modal
           isOpen={modalOpen}
           onClose={handleCloseModal}
-          title={`Inscrição - ${selectedOficina.titulo}`}
+          title={`Inscrição - ${oficinas.find(o => o.id === selectedOficina)?.titulo}`}
         >
           <div className="aspect-[640/2968] w-full max-w-3xl mx-auto">
             <iframe
-              src={selectedOficina.formUrl}
+              src={oficinas.find(o => o.id === selectedOficina)?.formUrl}
               className="w-full h-full"
               frameBorder="0"
               marginHeight={0}
@@ -236,6 +257,6 @@ export default function ProgramacaoPage() {
           </div>
         </Modal>
       )}
-    </div>
+    </main>
   );
 } 
