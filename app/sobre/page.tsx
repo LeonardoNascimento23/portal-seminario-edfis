@@ -1,4 +1,5 @@
 import { eventInfo } from '@/data/mockData';
+import Image from 'next/image';
 
 export default function SobrePage() {
   // Mapeamento de membros com foto
@@ -118,7 +119,7 @@ export default function SobrePage() {
                   {membros.filter(m => m.equipe === equipe).map((membro, idx) => (
                     <div key={membro.nome + idx} className="p-4 bg-gray-50 rounded-lg flex flex-col items-center text-center shadow">
                       {membro.foto && (
-                        <img src={membro.foto} alt={membro.nome} className="w-20 h-20 rounded-full object-cover border-2 border-[#A68521] mb-2 shadow" />
+                        <Image src={membro.foto} alt={membro.nome} className="w-20 h-20 rounded-full object-cover border-2 border-[#A68521] mb-2 shadow" width={80} height={80} />
                       )}
                       <span className="font-semibold text-[#204F8C]">{membro.nome}</span>
                       <span className="text-[#A68521] text-sm font-medium">{membro.funcao}</span>
@@ -150,9 +151,9 @@ export default function SobrePage() {
           <section className="bg-white rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl font-semibold mb-4 text-[#204F8C]">Instituições Envolvidas</h2>
             <div className="flex justify-center items-center space-x-8">
-              <img src={eventInfo.logos.ufgd} alt="Logo UFGD" className="h-20" />
-              <img src={eventInfo.logos.edFisica} alt="Logo Educação Física" className="h-20" />
-              <img src={eventInfo.logos.faed} alt="Logo FAED" className="h-20" />
+              <Image src={eventInfo.logos.ufgd} alt="Logo UFGD" className="h-20" width={80} height={80} />
+              <Image src={eventInfo.logos.edFisica} alt="Logo Educação Física" className="h-20" width={80} height={80} />
+              <Image src={eventInfo.logos.faed} alt="Logo FAED" className="h-20" width={80} height={80} />
             </div>
           </section>
         </div>

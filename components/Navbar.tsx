@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -24,10 +25,12 @@ export default function Navbar() {
       <div className="container">
         <div className="flex justify-between items-center h-20 gap-4">
           <Link href="/" className="flex items-center space-x-3 group">
-            <img
+            <Image
               src="/images/logo-educacao-fisica-ufgd.png"
               alt="Logo Educação Física UFGD"
-              className="h-12 w-12 rounded-full border-2 border-[#A68521] bg-white shadow-md group-hover:scale-105 transition-transform"
+              width={40}
+              height={40}
+              className="h-12 w-auto rounded-full border-2 border-[#A68521] bg-white shadow-md group-hover:scale-105 transition-transform"
             />
             <span className="text-2xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors">
               XI Seminário EdFis

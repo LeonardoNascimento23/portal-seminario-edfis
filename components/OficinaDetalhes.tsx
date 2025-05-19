@@ -1,75 +1,67 @@
 'use client';
 
-import { Oficina } from '@/types/oficina';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, MapPin, Users } from 'lucide-react';
-import Image from 'next/image';
+import { Oficina } from '@/app/programacao/data';
 
 interface OficinaDetalhesProps {
-  oficina: Oficina | null;
+  oficina: Oficina;
   onClose: () => void;
 }
 
 export default function OficinaDetalhes({ oficina, onClose }: OficinaDetalhesProps) {
-  if (!oficina) return null;
-
   return (
-    <Dialog open={!!oficina} onOpenChange={onClose}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-primary">
-            {oficina.titulo}
-          </DialogTitle>
-        </DialogHeader>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="p-6">
+          <div className="flex justify-between items-start mb-6">
+            <h2 className="text-2xl font-bold text-[#204F8C]">{oficina.titulo}</h2>
+            <button
+              onClick={onClose}
+              className="text-gray-500 hover:text-gray-700"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <div className="flex items-center text-muted-foreground">
-                <Calendar className="mr-2 h-4 w-4" />
-                <span>{oficina.data}</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <Clock className="mr-2 h-4 w-4" />
-                <span>{oficina.horario}</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <MapPin className="mr-2 h-4 w-4" />
-                <span>{oficina.local}</span>
-              </div>
-              <div className="flex items-center text-muted-foreground">
-                <Users className="mr-2 h-4 w-4" />
-                <span>{oficina.vagas} vagas disponíveis</span>
-              </div>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold text-gray-700">Ministrante</h3>
+              <p className="text-gray-600">{oficina.ministrante}</p>
             </div>
 
             <div>
-              <h3 className="mb-2 text-lg font-semibold">Sobre a Oficina</h3>
-              <p className="text-muted-foreground">{oficina.descricao}</p>
+              <h3 className="font-semibold text-gray-700">Data e Horário</h3>
+              <p className="text-gray-600">{oficina.data} às {oficina.horario}</p>
             </div>
-          </div>
 
-          <div className="space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="relative h-24 w-24 overflow-hidden rounded-full">
-                <Image
-                  src={oficina.palestrante.foto}
-                  alt={oficina.palestrante.nome}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold">
-                  {oficina.palestrante.titulo} {oficina.palestrante.nome}
-                </h3>
-                <p className="text-sm text-muted-foreground">{oficina.palestrante.bio}</p>
+            <div>
+              <h3 className="font-semibold text-gray-700">Local</h3>
+              <p className="text-gray-600">{oficina.local}</p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-700">Descrição</h3>
+              <p className="text-gray-600">{oficina.descricao}</p>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="font-semibold text-gray-700 mb-4">Inscrição</h3>
+              <div className="aspect-[640/2968] w-full">
+                <iframe
+                  src={oficina.formUrl}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                >
+                  Carregando…
+                </iframe>
               </div>
             </div>
           </div>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   );
 } 
