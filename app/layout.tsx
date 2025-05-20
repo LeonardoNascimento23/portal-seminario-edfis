@@ -7,8 +7,8 @@ import Footer from '../components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'XI Seminário de Educação Física',
-  description: 'Portal oficial do XI Seminário de Educação Física',
+  title: 'XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
+  description: 'Portal oficial do XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

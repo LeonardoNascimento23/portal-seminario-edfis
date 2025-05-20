@@ -7,6 +7,12 @@ export default function SobrePage() {
     // Coordenação Geral
     {
       equipe: 'Coordenação Geral',
+      nome: 'Doutor Deyvid Tenner de Souza Rizzo',
+      funcao: 'Coordenador do Curso de Educação Física',
+      foto: '/images/DeyvidTennerdeSouzaRizzo.jpeg',
+    },
+    {
+      equipe: 'Coordenação Geral',
       nome: 'Pâmela Talita Valdez de Lima',
       funcao: 'Coordenadora Geral',
       foto: '/images/PamelaTalitaValdezdelima.jpeg',
@@ -32,6 +38,12 @@ export default function SobrePage() {
       nome: 'Mariana Zucão Barbosa Espindola',
       funcao: 'Líder das Inscrições',
       foto: '/images/MarianaZucaoBarbosaEspindola.jpeg',
+    },
+    {
+      equipe: 'Equipe de Inscrições',
+      nome: 'Doutora Josiane Fujisawa Filus de Freitas',
+      funcao: 'Membro',
+      foto: '/images/JosianeFujisawaFilusdeFreitas.jpeg',
     },
     { equipe: 'Equipe de Inscrições', nome: 'João Buttini', funcao: 'Membro' },
     { equipe: 'Equipe de Inscrições', nome: 'Brenda Dantas', funcao: 'Membro' },
@@ -136,7 +148,7 @@ export default function SobrePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold mb-2 text-[#A68521]">Data</h3>
-                <p className="text-gray-600">10 e 11 de Junho de 2025</p>
+                <p className="text-gray-600">23 a 27 de Junho de 2025</p>
                 <p className="text-gray-600 mt-2">Prazo para inscrições: {new Date(eventInfo.registrationDeadline).toLocaleDateString('pt-BR')}</p>
               </div>
               <div>

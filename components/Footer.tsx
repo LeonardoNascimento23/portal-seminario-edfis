@@ -18,7 +18,7 @@ export default function Footer() {
               className="mb-4 rounded-full border-2 border-[#A68521] bg-white"
             />
             <p className="text-gray-300 mb-4">
-              XI Seminário de Educação Física da UFGD - Um evento acadêmico para discutir temas relevantes da área e promover integração profissional.
+              XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física da UFGD - Um evento acadêmico para discutir temas relevantes da área e promover integração profissional.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>Universidade Federal da Grande Dourados</li>
               <li>Faculdade de Educação Física</li>
               <li>Dourados - MS</li>
-              <li>Email: seminarioedfis@ufgd.edu.br</li>
+              <li>Email: ufgdeducacaofisica@gmail.com</li>
             </ul>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Footer() {
         {/* Copyright e Créditos */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-white font-medium mb-2">
-            &copy; {new Date().getFullYear()} XI Seminário de Educação Física UFGD. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física UFGD. Todos os direitos reservados.
           </p>
           <p className="text-gray-300">
             Desenvolvido por{' '}

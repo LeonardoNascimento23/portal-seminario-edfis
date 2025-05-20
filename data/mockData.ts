@@ -51,12 +51,36 @@ export interface EventInfo {
     role: string;
     course: string;
     institution: string;
+    image?: string;
   }[];
   logos: {
     ufgd: string;
     edFisica: string;
     faed: string;
   };
+}
+
+export interface Atividade {
+  titulo: string;
+  descricao?: string;
+}
+
+export interface Periodo {
+  dia_semana_inicio: string;
+  data_inicio: string;
+  dia_semana_fim: string;
+  data_fim: string;
+}
+
+export interface DiaProgramacao {
+  dia_semana?: string;
+  data?: string;
+  periodo?: Periodo;
+  atividades: Atividade[];
+}
+
+export interface Programacao {
+  programacao: DiaProgramacao[];
 }
 
 export const mockSchedule: ActivitySchedule[] = [
@@ -97,10 +121,10 @@ export const mockSchedule: ActivitySchedule[] = [
     id: '4',
     title: 'Oficina Atividade Física Funcional',
     date: '2025-06-26',
-    startTime: '08:00',
-    endTime: '12:00',
+    startTime: '19:00',
+    endTime: '',
     type: 'workshop',
-    location: 'Sala de Ginástica - UFGD',
+    location: 'Quadra Poliesportiva – Unidade II da UFGD',
     description: 'Oficina ministrada pela Doutora Karla Soares Bertuccini sobre Atividade Física Funcional.',
     status: 'Aguardando'
   },
@@ -108,10 +132,10 @@ export const mockSchedule: ActivitySchedule[] = [
     id: '5',
     title: 'Oficina Esportes de Aventura',
     date: '2025-06-26',
-    startTime: '13:00',
-    endTime: '17:00',
+    startTime: '19:00',
+    endTime: '',
     type: 'workshop',
-    location: 'Área Externa - UFGD',
+    location: 'Ao lado do LABEF',
     description: 'Oficina ministrada pelo Professor Lucas da Silva Ferreira sobre Esportes de Aventura, com foco em Slackline.',
     status: 'Aguardando'
   },
@@ -119,10 +143,10 @@ export const mockSchedule: ActivitySchedule[] = [
     id: '6',
     title: 'Oficina Ginástica Rítmica',
     date: '2025-06-26',
-    startTime: '08:00',
-    endTime: '12:00',
+    startTime: '19:00',
+    endTime: '',
     type: 'workshop',
-    location: 'Sala de Dança - UFGD',
+    location: 'Laboratório de Atividades Rítmicas e Dança – LARDAN - (LABEF)',
     description: 'Oficina ministrada pela Professora Paola Gouveia Schemberger Levandoski sobre Ginástica Rítmica.',
     status: 'Aguardando'
   },
@@ -130,10 +154,10 @@ export const mockSchedule: ActivitySchedule[] = [
     id: '7',
     title: 'Oficina Introdução ao Beach Tennis',
     date: '2025-06-26',
-    startTime: '13:00',
-    endTime: '17:00',
+    startTime: '19:00',
+    endTime: '',
     type: 'workshop',
-    location: 'Quadra de Areia - UFGD',
+    location: 'Quadra de areia (ao lado do LABEF)',
     description: 'Oficina ministrada pelo Instrutor Jader Morilla sobre Beach Tennis.',
     status: 'Aguardando'
   },
@@ -142,9 +166,9 @@ export const mockSchedule: ActivitySchedule[] = [
     title: 'Oficina Nutrição Esportiva Aplicada à Hipertrofia e Redução de Massa Gorda',
     date: '2025-06-26',
     startTime: '19:00',
-    endTime: '22:00',
+    endTime: '',
     type: 'workshop',
-    location: 'Auditório - UFGD',
+    location: 'Sala 9 (FAED)',
     description: 'Oficina ministrada pelo Doutor Paulo Christiano Barboso Lollo sobre Nutrição Esportiva.',
     status: 'Aguardando'
   }
@@ -158,8 +182,8 @@ export const mockLectures: Lecture[] = [
     speakerBio: 'Formada em licenciatura e bacharel em educação Física. Especialista em Educação, métodos e tecnica de ensino. Formada em treinamento Funcional, CORE 360. Formação em Pilates. Formação em Liberação Miofascial. Formada em sistemas de treinamento Funcional. Técnica de laboratório na área de educação física e Atua na Progesp - Divisao de Saúde com projetos voltados para a saúde do servidor.',
     description: 'Uma oficina prática sobre Atividade Física Funcional, ministrada pela Doutora Karla Soares Bertuccini.',
     date: '2025-06-26',
-    time: '08:00',
-    location: 'Sala de Ginástica - UFGD',
+    time: '19:00',
+    location: 'Quadra Poliesportiva – Unidade II da UFGD',
     imageUrl: '/images/DoutoraKarlaSoaresBertuccini.jpeg',
     maxParticipants: 30,
     currentParticipants: 15,
@@ -177,8 +201,8 @@ export const mockLectures: Lecture[] = [
     speakerBio: 'Meu nome é Lucas da Silva Ferreira, tenho 31 anos, sou da 4ª turma do curso de Educação Física da UFGD e me formei em 2016. No último semestre eu prestei concurso para professor da rede municipal de Dourados e em 2017 assumi o cargo onde permaneço até hoje. Tenho experiência na educação infantil, pois é uma fase onde me identifiquei mais e também porque há uma importância a mais sobre ensinar Educação Física para essa faixa etária. A oficina que estarei mestrando se chama "Esportes de Aventura" e nela estarei apresentando um esporte chamado Slackline, esse esporte ainda está em crescimento pelo Brasil e está conseguindo uma boa base de praticantes e atletas. Eu conheci e comecei a praticar em 2012 e por todo esse caminho a pratica do Slackline se tornou rotina, tanto na hora de adquirir o material até levar para a escola e apresentar para meus alunos.',
     description: 'Uma oficina prática sobre Esportes de Aventura, com foco especial em Slackline.',
     date: '2025-06-26',
-    time: '13:00',
-    location: 'Área Externa - UFGD',
+    time: '19:00',
+    location: 'Ao lado do LABEF',
     imageUrl: '/images/ProfessorLucasdaSilvaFerreira.jpeg',
     maxParticipants: 25,
     currentParticipants: 20,
@@ -196,8 +220,8 @@ export const mockLectures: Lecture[] = [
     speakerBio: 'Formada em Educação Física pela Universidade Estadual de Ponta Grossa (UEPG) é Especialista em Ginástica Rítmica pela UNOPAR. Atualmente é professora da Escola SEI- Dourados. Tem experiência na modalidade de Ginástica Artística sendo Técnica Campeã em Campeonatos desta modalidade no estado do Paraná. Formada também em Ballet Clássico foi aprovada na Escola de Dança do Teatro Guaíra em Curitiba e participou como solista em diversos espetáculos.',
     description: 'Uma oficina prática sobre Ginástica Rítmica, ministrada pela Professora Paola Gouveia Schemberger Levandoski.',
     date: '2025-06-26',
-    time: '08:00',
-    location: 'Sala de Dança - UFGD',
+    time: '19:00',
+    location: 'Laboratório de Atividades Rítmicas e Dança – LARDAN - (LABEF)',
     imageUrl: '/images/ProfessoraPaolaGouveiaSchembergerLevandoski.jpeg',
     maxParticipants: 25,
     currentParticipants: 18,
@@ -215,8 +239,8 @@ export const mockLectures: Lecture[] = [
     speakerBio: 'Jader Morilla, 32 anos, há cinco anos trabalha com esporte na areia, inicialmente no futevôlei e há dois anos também no Beach tennis. Curso de Capacitação de professores metodologia Naldo, Campo Grande-MS. Workshop Escola Toss. Cursos de Capacitação pela CBT, ITF. Curso nível verde 🟢 em Cascavel-PR. Curso nível amarelo 🟡 Londrina-PR. Graduando quinto semestre em Educação Física, Unicesumar.',
     description: 'Uma oficina prática sobre Beach Tennis, ministrada pelo Instrutor Jader Morilla.',
     date: '2025-06-26',
-    time: '13:00',
-    location: 'Quadra de Areia - UFGD',
+    time: '19:00',
+    location: 'Quadra de areia (ao lado do LABEF)',
     imageUrl: '/images/InstrutorJaderMorilla.jpeg',
     maxParticipants: 20,
     currentParticipants: 15,
@@ -235,7 +259,7 @@ export const mockLectures: Lecture[] = [
     description: 'Uma oficina sobre Nutrição Esportiva, com foco em hipertrofia e redução de massa gorda.',
     date: '2025-06-26',
     time: '19:00',
-    location: 'Auditório - UFGD',
+    location: 'Sala 9 (FAED)',
     imageUrl: '/images/DoutorPauloChristianoBarbosoLollo.jpeg',
     maxParticipants: 50,
     currentParticipants: 35,
@@ -251,7 +275,7 @@ export const mockLectures: Lecture[] = [
 export const mockNewsArticles: NewsArticle[] = [
   {
     id: '1',
-    title: 'Inscrições Abertas para o XI Seminário',
+    title: 'Inscrições Abertas para o XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
     content: `O XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física está com inscrições abertas! Este ano, o evento promete ser ainda mais especial, trazendo palestrantes renomados e discussões fundamentais para a área. O seminário acontecerá nos dias 10 e 11 de junho de 2025, no Campus Universitário da UFGD, e contará com uma programação diversificada que inclui oficinas, apresentações de trabalhos e atividades culturais. Entre os destaques da programação, teremos discussões sobre metodologias ativas no ensino da Educação Física, inclusão e adaptação de atividades físicas, e as últimas tendências em pesquisa na área. As inscrições podem ser realizadas através do nosso site até o dia 8 de junho. Não perca esta oportunidade de participar de um dos maiores eventos acadêmicos da área!`,
     summary: 'Participe deste importante evento acadêmico que acontecerá nos dias 10 e 11 de junho de 2025.',
     date: '2025-05-15',
@@ -290,12 +314,19 @@ export const mockNewsArticles: NewsArticle[] = [
 export const eventInfo: EventInfo = {
   title: 'XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
   description: 'O XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física é uma iniciativa dos/as professores/as do Curso de Licenciatura em Educação Física com o objetivo de apresentar os produtos finais das disciplinas de Estágio Supervisionado e Trabalho de Conclusão de Curso e promover a interação entre a universidade e a sociedade, levando os conhecimentos e recursos produzidos dentro da instituição para fora dos muros, beneficiando a comunidade e contribuindo para o desenvolvimento social, cultural e econômico.',
-  registrationDeadline: '2025-06-08',
+  registrationDeadline: '2025-06-23',
   contact: {
-    email: 'pamela@email.com',
-    phone: '(67) XXXX-XXXX'
+    email: 'ufgdeducacaofisica@gmail.com',
+    phone: '(67) 3410-2118'
   },
   organizers: [
+    {
+      name: 'Doutor Deyvid Tenner de Souza Rizzo',
+      role: 'Coordenador do Curso de Educação Física',
+      course: 'Educação Física',
+      institution: 'UFGD',
+      image: '/images/DeyvidTennerdeSouzaRizzo.jpeg'
+    },
     {
       name: 'Emily Alves da Silva',
       role: 'Membro da Comissão Organizadora',
@@ -331,6 +362,13 @@ export const eventInfo: EventInfo = {
       role: 'Comissão Organizadora',
       course: 'Educação Física Licenciatura',
       institution: 'UFGD'
+    },
+    {
+      name: 'Doutora Josiane Fujisawa Filus de Freitas',
+      role: 'Equipe de Inscrições',
+      course: 'Educação Física',
+      institution: 'UFGD',
+      image: '/images/JosianeFujisawaFilusdeFreitas.jpeg'
     }
   ],
   logos: {
@@ -338,4 +376,46 @@ export const eventInfo: EventInfo = {
     edFisica: '/images/EducacaoFisica.png',
     faed: '/images/FAEDlogo.png'
   }
+};
+
+export const programacaoEvento: Programacao = {
+  programacao: [
+    {
+      dia_semana: "Segunda-feira",
+      data: "2025-06-23",
+      atividades: [
+        {
+          titulo: "Cerimônia de Abertura"
+        },
+        {
+          titulo: "Festival de Dança",
+          descricao: "Apresentações artísticas e culturais de grande diversidade e riqueza"
+        }
+      ]
+    },
+    {
+      periodo: {
+        dia_semana_inicio: "Terça-feira",
+        data_inicio: "2025-06-24",
+        dia_semana_fim: "Quinta-feira",
+        data_fim: "2025-06-26"
+      },
+      atividades: [
+        {
+          titulo: "Exposições de Estágios e TCC",
+          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos"
+        }
+      ]
+    },
+    {
+      dia_semana: "Sexta-feira",
+      data: "2025-06-27",
+      atividades: [
+        {
+          titulo: "Oficinas Temáticas",
+          descricao: "Sessões práticas com especialistas para aprendizado e interação"
+        }
+      ]
+    }
+  ]
 }; 

@@ -17,9 +17,9 @@ export default function HeroSection() {
           style={{ boxShadow: '0 8px 32px 0 rgba(32,79,140,0.25)' }}
         />
         <h1 className="text-5xl font-bold mb-4 drop-shadow-lg text-balance text-white animate-fade-in">
-          XI Seminário de Educação Física
+          XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física
         </h1>
-        <p className="text-xl mb-8 drop-shadow text-balance animate-fade-in delay-100">23 a 27 de Junho de 2025</p>
+        <p className="text-xl mb-8 drop-shadow text-balance animate-fade-in delay-100 text-white">23 a 27 de Junho de 2025</p>
         <Link href="/inscricao" className="btn btn-primary shadow-lg border-2 border-[#A68521] hover:bg-[#A68521] hover:text-white transition-all duration-200 animate-fade-in delay-200">
           Inscreva-se
         </Link>

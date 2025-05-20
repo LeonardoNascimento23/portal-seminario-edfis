@@ -32,9 +32,14 @@ export default function Navbar() {
               height={40}
               className="h-12 w-auto rounded-full border-2 border-[#A68521] bg-white shadow-md group-hover:scale-105 transition-transform"
             />
-            <span className="text-2xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors">
-              XI Seminário EdFis
-            </span>
+            <div className="flex flex-col text-left w-full max-w-md">
+              <span className="text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight text-justify">
+                XI Seminário de Práticas de Ensino,
+              </span>
+              <span className="text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight text-justify">
+                Pesquisa e Extensão em Educação Física
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
