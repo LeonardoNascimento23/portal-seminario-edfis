@@ -7,83 +7,83 @@ import Link from 'next/link';
 const imagens = [
   {
     src: '/images/galeria/seminarioedfis20250519_002.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Palestra',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Palestra',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_003.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Workshop',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Workshop',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_004.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Atividade Prática',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Atividade Prática',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_005.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Oficina',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Oficina',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_006.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Apresentação',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Apresentação',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_007.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Palestra',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Palestra',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_008.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Workshop',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Workshop',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_009.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Atividade Prática',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Atividade Prática',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_010.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Oficina',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Oficina',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_011.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Apresentação',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Apresentação',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_012.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Palestra',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Palestra',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_013.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Workshop',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Workshop',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_014.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Atividade Prática',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Atividade Prática',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_015.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Oficina',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Oficina',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_016.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Apresentação',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Apresentação',
+    title: 'Seminário de Educação Física 2025'
   },
   {
     src: '/images/galeria/seminarioedfis20250519_017.jpeg',
-    alt: 'Seminário de Educação Física 2023 - Encerramento',
-    title: 'Seminário de Educação Física 2023'
+    alt: 'Seminário de Educação Física 2025 - Encerramento',
+    title: 'Seminário de Educação Física 2025'
   }
 ];
 
