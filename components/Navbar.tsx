@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-gradient-to-r from-[#204F8C] to-[#1A4173] text-white shadow-xl sticky top-0 z-50 border-b-4 border-[#A68521]">
-      <div className="container">
+      <div className="container px-4 mx-auto">
         <div className="flex justify-between items-center h-20 gap-4">
           <Link href="/" className="flex items-center space-x-3 group">
             <Image
@@ -33,11 +33,11 @@ export default function Navbar() {
               className="h-12 w-auto rounded-full border-2 border-[#A68521] bg-white shadow-md group-hover:scale-105 transition-transform"
             />
             <div className="flex flex-col text-left w-full max-w-md">
-              <span className="text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight text-justify">
-                XI Seminário de Práticas de Ensino,
-              </span>
-              <span className="text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight text-justify">
-                Pesquisa e Extensão em Educação Física
+              <span 
+                className="text-lg md:text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight"
+                title="XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física"
+              >
+                XI Seminário em Educação Física
               </span>
             </div>
           </Link>
@@ -96,29 +96,31 @@ export default function Navbar() {
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-          } overflow-hidden`}
+          } overflow-hidden bg-[#1A4173] rounded-b-lg shadow-lg`}
         >
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-2">
             {navLinks.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block px-4 py-2 rounded-lg transition-all duration-200 hover:bg-[#A68521]/20 hover:text-[#A68521] ${
+                className={`block px-4 py-2 transition-all duration-200 text-white hover:bg-white/20 ${
                   isActive(link.href)
-                    ? 'bg-[#A68521]/20 font-semibold underline underline-offset-4 text-[#A68521] border-l-4 border-[#A68521]' : ''
+                    ? 'bg-white/20 font-semibold text-white border-l-4 border-[#A68521]' : ''
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/inscricao"
-              className="block px-4 py-2 text-center bg-[#A68521] hover:bg-[#204F8C] hover:text-white rounded-lg transition-all duration-200 shadow-md border-2 border-[#A68521]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Inscreva-se
-            </Link>
+            <div className="px-4 pt-2">
+              <Link
+                href="/inscricao"
+                className="block w-full py-2 text-center bg-[#A68521] text-white hover:bg-[#8B6E1B] rounded-lg transition-all duration-200 shadow-md"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inscreva-se
+              </Link>
+            </div>
           </div>
         </div>
       </div>

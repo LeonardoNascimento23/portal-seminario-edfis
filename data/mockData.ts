@@ -120,7 +120,7 @@ export const mockSchedule: ActivitySchedule[] = [
   {
     id: '4',
     title: 'Oficina Atividade Física Funcional',
-    date: '2025-06-26',
+    date: '2025-06-27',
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
@@ -131,7 +131,7 @@ export const mockSchedule: ActivitySchedule[] = [
   {
     id: '5',
     title: 'Oficina Esportes de Aventura',
-    date: '2025-06-26',
+    date: '2025-06-27',
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
@@ -142,7 +142,7 @@ export const mockSchedule: ActivitySchedule[] = [
   {
     id: '6',
     title: 'Oficina Ginástica Rítmica',
-    date: '2025-06-26',
+    date: '2025-06-27',
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
@@ -153,7 +153,7 @@ export const mockSchedule: ActivitySchedule[] = [
   {
     id: '7',
     title: 'Oficina Introdução ao Beach Tennis',
-    date: '2025-06-26',
+    date: '2025-06-27',
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
@@ -164,12 +164,12 @@ export const mockSchedule: ActivitySchedule[] = [
   {
     id: '8',
     title: 'Oficina Nutrição Esportiva Aplicada à Hipertrofia e Redução de Massa Gorda',
-    date: '2025-06-26',
+    date: '2025-06-27',
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
     location: 'Sala 9 (FAED)',
-    description: 'Oficina ministrada pelo Doutor Paulo Christiano Barboso Lollo sobre Nutrição Esportiva.',
+    description: 'Oficina ministrada pelo Doutor Pablo Christiano Barboso Lollo sobre Nutrição Esportiva.',
     status: 'Aguardando'
   }
 ];
@@ -181,7 +181,7 @@ export const mockLectures: Lecture[] = [
     speaker: 'Doutora Karla Soares Bertuccini',
     speakerBio: 'Formada em licenciatura e bacharel em educação Física. Especialista em Educação, métodos e tecnica de ensino. Formada em treinamento Funcional, CORE 360. Formação em Pilates. Formação em Liberação Miofascial. Formada em sistemas de treinamento Funcional. Técnica de laboratório na área de educação física e Atua na Progesp - Divisao de Saúde com projetos voltados para a saúde do servidor.',
     description: 'Uma oficina prática sobre Atividade Física Funcional, ministrada pela Doutora Karla Soares Bertuccini.',
-    date: '2025-06-26',
+    date: '2025-06-27',
     time: '19:00',
     location: 'Quadra Poliesportiva – Unidade II da UFGD',
     imageUrl: '/images/DoutoraKarlaSoaresBertuccini.jpeg',
@@ -200,7 +200,7 @@ export const mockLectures: Lecture[] = [
     speaker: 'Professor Lucas da Silva Ferreira',
     speakerBio: 'Meu nome é Lucas da Silva Ferreira, tenho 31 anos, sou da 4ª turma do curso de Educação Física da UFGD e me formei em 2016. No último semestre eu prestei concurso para professor da rede municipal de Dourados e em 2017 assumi o cargo onde permaneço até hoje. Tenho experiência na educação infantil, pois é uma fase onde me identifiquei mais e também porque há uma importância a mais sobre ensinar Educação Física para essa faixa etária. A oficina que estarei mestrando se chama "Esportes de Aventura" e nela estarei apresentando um esporte chamado Slackline, esse esporte ainda está em crescimento pelo Brasil e está conseguindo uma boa base de praticantes e atletas. Eu conheci e comecei a praticar em 2012 e por todo esse caminho a pratica do Slackline se tornou rotina, tanto na hora de adquirir o material até levar para a escola e apresentar para meus alunos.',
     description: 'Uma oficina prática sobre Esportes de Aventura, com foco especial em Slackline.',
-    date: '2025-06-26',
+    date: '2025-06-27',
     time: '19:00',
     location: 'Ao lado do LABEF',
     imageUrl: '/images/ProfessorLucasdaSilvaFerreira.jpeg',
@@ -219,7 +219,7 @@ export const mockLectures: Lecture[] = [
     speaker: 'Professora Paola Gouveia Schemberger Levandoski',
     speakerBio: 'Formada em Educação Física pela Universidade Estadual de Ponta Grossa (UEPG) é Especialista em Ginástica Rítmica pela UNOPAR. Atualmente é professora da Escola SEI- Dourados. Tem experiência na modalidade de Ginástica Artística sendo Técnica Campeã em Campeonatos desta modalidade no estado do Paraná. Formada também em Ballet Clássico foi aprovada na Escola de Dança do Teatro Guaíra em Curitiba e participou como solista em diversos espetáculos.',
     description: 'Uma oficina prática sobre Ginástica Rítmica, ministrada pela Professora Paola Gouveia Schemberger Levandoski.',
-    date: '2025-06-26',
+    date: '2025-06-27',
     time: '19:00',
     location: 'Laboratório de Atividades Rítmicas e Dança – LARDAN - (LABEF)',
     imageUrl: '/images/ProfessoraPaolaGouveiaSchembergerLevandoski.jpeg',
@@ -238,7 +238,7 @@ export const mockLectures: Lecture[] = [
     speaker: 'Instrutor Jader Morilla',
     speakerBio: 'Jader Morilla, 32 anos, há cinco anos trabalha com esporte na areia, inicialmente no futevôlei e há dois anos também no Beach tennis. Curso de Capacitação de professores metodologia Naldo, Campo Grande-MS. Workshop Escola Toss. Cursos de Capacitação pela CBT, ITF. Curso nível verde 🟢 em Cascavel-PR. Curso nível amarelo 🟡 Londrina-PR. Graduando quinto semestre em Educação Física, Unicesumar.',
     description: 'Uma oficina prática sobre Beach Tennis, ministrada pelo Instrutor Jader Morilla.',
-    date: '2025-06-26',
+    date: '2025-06-27',
     time: '19:00',
     location: 'Quadra de areia (ao lado do LABEF)',
     imageUrl: '/images/InstrutorJaderMorilla.jpeg',
@@ -254,13 +254,13 @@ export const mockLectures: Lecture[] = [
   {
     id: '5',
     title: 'OFICINA NUTRIÇÃO ESPORTIVA APLICADA À HIPERTROFIA E REDUÇÃO DE MASSA GORDA',
-    speaker: 'Doutor Paulo Christiano Barboso Lollo',
+    speaker: 'Doutor Pablo Christiano Barboso Lollo',
     speakerBio: 'Possui graduação em Educação Física pela Universidade Estadual de Campinas (2004), mestrado em Alimentos e Nutrição pela Universidade Estadual de Campinas (2007) e doutorado em Alimentos e Nutrição pela Universidade Estadual de Campinas (2012) e pós-doutorado em Fisiologia e Biofísica pela pela Universidade Estadual de Campinas (2013). Atualmente é professor de magistério superior da Universidade Federal da Grande Dourados.',
     description: 'Uma oficina sobre Nutrição Esportiva, com foco em hipertrofia e redução de massa gorda.',
-    date: '2025-06-26',
+    date: '2025-06-27',
     time: '19:00',
     location: 'Sala 9 (FAED)',
-    imageUrl: '/images/DoutorPauloChristianoBarbosoLollo.jpeg',
+    imageUrl: '/images/DoutorPabloChristianoBarbosoLollo.jpeg',
     maxParticipants: 50,
     currentParticipants: 35,
     learningPoints: [
@@ -314,7 +314,7 @@ export const mockNewsArticles: NewsArticle[] = [
 export const eventInfo: EventInfo = {
   title: 'XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
   description: 'O XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física é uma iniciativa dos/as professores/as do Curso de Licenciatura em Educação Física com o objetivo de apresentar os produtos finais das disciplinas de Estágio Supervisionado e Trabalho de Conclusão de Curso e promover a interação entre a universidade e a sociedade, levando os conhecimentos e recursos produzidos dentro da instituição para fora dos muros, beneficiando a comunidade e contribuindo para o desenvolvimento social, cultural e econômico.',
-  registrationDeadline: '2025-06-23',
+  registrationDeadline: '2025-06-08',
   contact: {
     email: 'ufgdeducacaofisica@gmail.com',
     phone: '(67) 3410-2118'
@@ -378,32 +378,59 @@ export const eventInfo: EventInfo = {
   }
 };
 
-export const programacaoEvento: Programacao = {
+export const programacaoEvento = {
   programacao: [
     {
       dia_semana: "Segunda-feira",
       data: "2025-06-23",
       atividades: [
         {
-          titulo: "Cerimônia de Abertura"
+          titulo: "Cerimônia de Abertura",
+          descricao: "Abertura oficial do evento com autoridades e convidados",
+          horario: "19:00",
+          local: "Auditório da UFGD – Unidade 2"
         },
         {
           titulo: "Festival de Dança",
-          descricao: "Apresentações artísticas e culturais de grande diversidade e riqueza"
+          descricao: "Apresentações artísticas e culturais de grande diversidade e riqueza",
+          horario: "Após a cerimônia",
+          local: "Auditório da UFGD – Unidade 2"
         }
       ]
     },
     {
-      periodo: {
-        dia_semana_inicio: "Terça-feira",
-        data_inicio: "2025-06-24",
-        dia_semana_fim: "Quinta-feira",
-        data_fim: "2025-06-26"
-      },
+      dia_semana: "Terça-feira",
+      data: "2025-06-24",
       atividades: [
         {
           titulo: "Exposições de Estágios e TCC",
-          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos"
+          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          horario: "19:00",
+          local: "FAED"
+        }
+      ]
+    },
+    {
+      dia_semana: "Quarta-feira",
+      data: "2025-06-25",
+      atividades: [
+        {
+          titulo: "Exposições de Estágios e TCC",
+          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          horario: "19:00",
+          local: "FAED"
+        }
+      ]
+    },
+    {
+      dia_semana: "Quinta-feira",
+      data: "2025-06-26",
+      atividades: [
+        {
+          titulo: "Exposições de Estágios e TCC",
+          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          horario: "19:00",
+          local: "FAED"
         }
       ]
     },
@@ -413,7 +440,9 @@ export const programacaoEvento: Programacao = {
       atividades: [
         {
           titulo: "Oficinas Temáticas",
-          descricao: "Sessões práticas com especialistas para aprendizado e interação"
+          descricao: "Workshops práticos sobre diversos temas da Educação Física",
+          horario: "19:00",
+          local: "FAED"
         }
       ]
     }

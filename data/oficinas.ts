@@ -25,7 +25,7 @@ export const oficinas = [
     vagas: 30,
     descricao: 'Aspectos práticos da nutrição esportiva para hipertrofia muscular e redução de gordura corporal.',
     palestrante: {
-      nome: 'Paulo Christiano Barboso Lollo',
+      nome: 'Pablo Christiano Barboso Lollo',
       titulo: 'Doutor',
       bio: 'Possui graduação em Educação Física pela Universidade Estadual de Campinas (2004), mestrado em Alimentos e Nutrição pela Universidade Estadual de Campinas (2007) e doutorado em Alimentos e Nutrição pela Universidade Estadual de Campinas (2012) e pós-doutorado em Fisiologia e Biofísica pela pela Universidade Estadual de Campinas (2013). Atualmente é professor de magistério superior da Universidade Federal da Grande Dourados.',
       foto: '/images/DoutorPauloChristianoBarbosoLollo.jpeg'

@@ -32,6 +32,7 @@ export const noticias: Noticia[] = [
     conteudo: `
       A programação do XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física foi divulgada! O evento contará com uma grade diversificada de atividades, incluindo:
 
+      Segunda-feira, 23 de junho de 2025
       A cerimônia de abertura dará início ao evento, seguida pelo nosso Festival de Dança, que reunirá apresentações artísticas e culturais de grande diversidade e riqueza.
 
       Terça-feira a quinta-feira, de 24 a 26 de junho de 2025
@@ -56,7 +57,7 @@ export const noticias: Noticia[] = [
       - Professor Lucas da Silva Ferreira
       - Instrutor Jader Morilla
       - Professora Paola Gouveia
-      - Doutor Paulo Christiano Barboso
+      - Doutor Pablo Christiano Barboso
       - Professora Karla Soares Bertuccini
 
       Estes profissionais trarão suas experiências e conhecimentos para enriquecer ainda mais o evento. Não perca esta oportunidade de aprender com os melhores da área!
