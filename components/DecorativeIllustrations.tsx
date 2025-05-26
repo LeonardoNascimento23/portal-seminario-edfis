@@ -92,6 +92,50 @@ export default function DecorativeIllustrations() {
           className="w-full h-auto"
         />
       </div>
+
+      {/* Ilustração 9 - Meio superior esquerdo */}
+      <div className="absolute top-1/3 left-1/4 w-1/4 opacity-20 pointer-events-none" style={{ zIndex: 5 }}>
+        <Image
+          src="/images/undraw_bike-ride_ba0o.svg"
+          alt="Ilustração de passeio de bicicleta"
+          width={400}
+          height={400}
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* Ilustração 10 - Meio superior direito */}
+      <div className="absolute top-1/3 right-1/4 w-1/4 opacity-20 pointer-events-none" style={{ zIndex: 5 }}>
+        <Image
+          src="/images/undraw_game-day_m63l.svg"
+          alt="Ilustração de dia de jogo"
+          width={400}
+          height={400}
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* Ilustração 11 - Meio inferior esquerdo */}
+      <div className="absolute bottom-1/3 left-1/4 w-1/4 opacity-20 pointer-events-none" style={{ zIndex: 5 }}>
+        <Image
+          src="/images/undraw_homerun_n1g7.svg"
+          alt="Ilustração de home run"
+          width={400}
+          height={400}
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* Ilustração 12 - Meio inferior direito */}
+      <div className="absolute bottom-1/3 right-1/4 w-1/4 opacity-20 pointer-events-none" style={{ zIndex: 5 }}>
+        <Image
+          src="/images/undraw_skateboarding_4naf.svg"
+          alt="Ilustração de skateboarding"
+          width={400}
+          height={400}
+          className="w-full h-auto"
+        />
+      </div>
     </>
   );
 } 
