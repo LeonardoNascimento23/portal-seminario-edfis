@@ -314,7 +314,7 @@ export const mockNewsArticles: NewsArticle[] = [
 export const eventInfo: EventInfo = {
   title: 'XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física',
   description: 'O XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física é uma iniciativa dos/as professores/as do Curso de Licenciatura em Educação Física com o objetivo de apresentar os produtos finais das disciplinas de Estágio Supervisionado e Trabalho de Conclusão de Curso e promover a interação entre a universidade e a sociedade, levando os conhecimentos e recursos produzidos dentro da instituição para fora dos muros, beneficiando a comunidade e contribuindo para o desenvolvimento social, cultural e econômico.',
-  registrationDeadline: '2025-06-08',
+  registrationDeadline: '2025-06-07',
   contact: {
     email: 'ufgdeducacaofisica@gmail.com',
     phone: '(67) 3410-2118'
