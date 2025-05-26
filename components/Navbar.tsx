@@ -24,40 +24,37 @@ export default function Navbar() {
     <nav className="bg-gradient-to-r from-[#204F8C] to-[#1A4173] text-white shadow-xl sticky top-0 z-50 border-b-4 border-[#A68521]">
       <div className="container px-4 mx-auto">
         <div className="flex justify-between items-center h-20 gap-4">
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/images/logo-educacao-fisica-ufgd.png"
-              alt="Logo Educação Física UFGD"
+              alt="Logo Educação Física"
               width={40}
               height={40}
-              className="h-12 w-auto rounded-full border-2 border-[#A68521] bg-white shadow-md group-hover:scale-105 transition-transform"
+              className="w-10 h-10"
+              style={{ backgroundColor: 'white', borderRadius: '20px' }}
             />
-            <div className="flex flex-col text-left w-full max-w-md">
-              <span 
-                className="text-lg md:text-xl font-bold tracking-tight text-white drop-shadow-md group-hover:text-[#A68521] transition-colors leading-tight"
-                title="XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física"
-              >
-                XI Seminário em Educação Física
-              </span>
-            </div>
+            <span className="text-xl font-semibold text-[white] hover:text-[#A68521]">XI Seminário de Educação Física</span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 items-center">
-            {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`nav-link px-2 py-1 rounded transition-all duration-200 text-white hover:text-[#A68521] hover:bg-white/10 ${
-                  isActive(link.href)
-                    ? 'font-semibold underline underline-offset-4 text-[#A68521] bg-white/10 border-b-2 border-[#A68521]' : ''
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Link href="/inscricao" className="btn btn-accent shadow-md border-2 border-[#A68521] hover:bg-[#A68521] hover:text-white transition-all duration-200">
-              Inscreva-se
+          <div className="hidden md:flex space-x-8">
+            <Link href="/" className="text-[white] hover:text-[#A68521] font-medium">
+              Início
+            </Link>
+            <Link href="/programacao" className="text-[white] hover:text-[#A68521] font-medium">
+              Programação
+            </Link>
+            <Link href="/oficinas" className="text-[white] hover:text-[#A68521] font-medium">
+              Oficinas
+            </Link>
+            <Link href="/galeria" className="text-[white] hover:text-[#A68521] font-medium">
+              Galeria
+            </Link>
+            <Link href="/noticias" className="text-[white] hover:text-[#A68521] font-medium">
+              Notícias
+            </Link>
+            <Link href="/sobre" className="text-[white] hover:text-[#A68521] font-medium">
+              Sobre
             </Link>
           </div>
 
