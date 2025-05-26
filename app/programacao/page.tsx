@@ -1,6 +1,6 @@
 'use client';
 
-import { programacaoEvento, mockLectures } from '@/data/mockData';
+import { mockLectures } from '@/data/mockData';
 import { useState } from 'react';
 
 export default function ProgramacaoPage() {
@@ -8,26 +8,6 @@ export default function ProgramacaoPage() {
     title: string;
     details: React.ReactNode;
   }>(null);
-
-  const formatarData = (data: string) => {
-    return new Date(data).toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
-    });
-  };
-
-  const formatarDiaSemana = (data: string) => {
-    return new Date(data).toLocaleDateString('pt-BR', {
-      weekday: 'short'
-    });
-  };
-
-  const formatarDia = (data: string) => {
-    return new Date(data).toLocaleDateString('pt-BR', {
-      day: '2-digit'
-    });
-  };
 
   const EventModal = () => {
     if (!selectedEvent) return null;
@@ -103,7 +83,6 @@ export default function ProgramacaoPage() {
                           {hour.toString().padStart(2, '0')}:00
                         </td>
                         {Array.from({ length: 5 }).map((_, day) => {
-                          const currentDate = new Date(2025, 5, 23 + day);
                           const currentHour = hour;
                           
                           const hasEvent = (day === 0 && currentHour === 19) || 
