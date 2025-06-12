@@ -21,7 +21,7 @@ export const oficinas = [
     titulo: 'NUTRIÇÃO ESPORTIVA APLICADA À HIPERTROFIA E REDUÇÃO DE MASSA GORDA',
     data: '27/06/2025',
     horario: '19:00',
-    local: 'Sala 9 (FAED)',
+    local: 'Laboratório de Educação Física Escolar - LABEF',
     vagas: 30,
     descricao: 'Aspectos práticos da nutrição esportiva para hipertrofia muscular e redução de gordura corporal.',
     palestrante: {

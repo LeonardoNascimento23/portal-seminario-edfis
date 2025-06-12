@@ -32,9 +32,9 @@ export const programacaoData: Oficina[] = [
     resumo: 'Conheça os princípios da nutrição esportiva para ganho de massa muscular e perda de gordura.',
     data: '2024-06-27',
     tipo: 'palestra',
-    ministrante: 'Prof. Maria Santos',
+    ministrante: 'Prof.  Doutor Pablo Christiano Barboso Lollo',
     horario: '19:00',
-    local: 'Sala 9 (FAED)',
+    local: 'Laboratório de Educação Física Escolar - LABEF',
     descricao: 'Conheça os princípios da nutrição esportiva para ganho de massa muscular e perda de gordura.',
     formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfWYt5r3CGj46fO4h-bFU7tceJ-Lk2rZgLyuZwyy22Soo0FwA/viewform?embedded=true',
     formHeight: 2374

@@ -91,7 +91,7 @@ export const mockSchedule: ActivitySchedule[] = [
     startTime: '19:00',
     endTime: '22:30',
     type: 'event',
-    location: 'Auditório da UFGD – Unidade 2',
+    location: 'Auditório Central da UEMS',
     description: 'Apresentações artísticas e culturais dos alunos do curso de Educação Física.',
     status: 'Aguardando'
   },
