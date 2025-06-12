@@ -99,7 +99,7 @@ export default function ProgramacaoPage() {
                                       eventDetails = (
                                         <div>
                                           <p className="text-sm mb-4">Abertura oficial do evento com autoridades e convidados</p>
-                                          <p className="text-sm mb-2">Local: Auditório da UFGD – Unidade 2</p>
+                                          <p className="text-sm mb-2">Local: Auditório Central da UEMS</p>
                                           <p className="text-sm mb-4">Horário: 19:00</p>
                                           <div className="mt-4 pt-4 border-t border-gray-200">
                                             <h5 className="font-semibold text-[#A68521] mb-2">Festival de Dança</h5>
@@ -150,7 +150,7 @@ export default function ProgramacaoPage() {
                                      "Exposições de Estágios e TCC"}
                                   </div>
                                   <div className="text-[6px] sm:text-xs md:text-sm opacity-75">
-                                    19:00 - {day === 0 ? "Auditório UFGD" : "FAED"}
+                                    19:00 - {day === 0 ? "Auditório Central da UEMS" : "FAED"}
                                   </div>
                                 </button>
                               )}

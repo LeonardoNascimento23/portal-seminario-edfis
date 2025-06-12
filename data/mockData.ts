@@ -168,7 +168,7 @@ export const mockSchedule: ActivitySchedule[] = [
     startTime: '19:00',
     endTime: '',
     type: 'workshop',
-    location: 'Sala 9 (FAED)',
+    location: 'Laboratório de Educação Física Escolar - LABEF',
     description: 'Oficina ministrada pelo Doutor Pablo Christiano Barboso Lollo sobre Nutrição Esportiva.',
     status: 'Aguardando'
   }
@@ -259,7 +259,7 @@ export const mockLectures: Lecture[] = [
     description: 'Uma oficina sobre Nutrição Esportiva, com foco em hipertrofia e redução de massa gorda.',
     date: '2025-06-27',
     time: '19:00',
-    location: 'Sala 9 (FAED)',
+    location: 'Laboratório de Educação Física Escolar - LABEF',
     imageUrl: '/images/DoutorPabloChristianoBarbosoLollo.jpeg',
     maxParticipants: 50,
     currentParticipants: 35,
@@ -388,13 +388,13 @@ export const programacaoEvento = {
           titulo: "Cerimônia de Abertura",
           descricao: "Abertura oficial do evento com autoridades e convidados",
           horario: "19:00",
-          local: "Auditório da UFGD – Unidade 2"
+          local: "Auditório central da UEMS"
         },
         {
           titulo: "Festival de Dança",
           descricao: "Apresentações artísticas e culturais de grande diversidade e riqueza",
           horario: "Após a cerimônia",
-          local: "Auditório da UFGD – Unidade 2"
+          local: "Auditório central da UEMS"
         }
       ]
     },
