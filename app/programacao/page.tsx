@@ -1,13 +1,46 @@
 'use client';
 
-import { mockLectures } from '@/data/mockData';
-import { useState } from 'react';
+import { mockLectures, programacaoEvento } from '@/data/mockData';
+import { useState, Fragment } from 'react';
 
 export default function ProgramacaoPage() {
   const [selectedEvent, setSelectedEvent] = useState<null | {
     title: string;
     details: React.ReactNode;
   }>(null);
+
+  // Função utilitária para mapear dias do evento para colunas do calendário
+  const diasEvento = [
+    '2025-06-23', // Segunda
+    '2025-06-24', // Terça
+    '2025-06-25', // Quarta
+    '2025-06-26', // Quinta
+    '2025-06-27', // Sexta
+  ];
+
+  // Mapeia atividades por dia e horário
+  const atividadesPorDiaEHora: Record<string, Record<string, any[]>> = {};
+  programacaoEvento.programacao.forEach((dia) => {
+    if (!dia.data) return;
+    if (!atividadesPorDiaEHora[dia.data]) atividadesPorDiaEHora[dia.data] = {};
+    dia.atividades.forEach((atv) => {
+      const hora = (atv.horario || '').split(':')[0] + ':00';
+      if (!atividadesPorDiaEHora[dia.data][hora]) atividadesPorDiaEHora[dia.data][hora] = [];
+      atividadesPorDiaEHora[dia.data][hora].push(atv);
+    });
+  });
+
+  // Gerar dinamicamente todos os horários válidos (apenas HH:MM)
+  const horariosSet = new Set<string>();
+  programacaoEvento.programacao.forEach((dia) => {
+    dia.atividades.forEach((atv) => {
+      if (atv.horario && /^\d{2}:\d{2}$/.test(atv.horario)) {
+        horariosSet.add(atv.horario);
+      }
+    });
+  });
+  // Ordenar horários
+  const todosHorarios = Array.from(horariosSet).sort();
 
   const EventModal = () => {
     if (!selectedEvent) return null;
@@ -41,129 +74,59 @@ export default function ProgramacaoPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8 sm:py-12">
-        <div className="calendar bg-white rounded-lg shadow-lg">
-          <header className="p-4 border-b border-gray-200 flex justify-center items-center">
-            <h1 className="text-lg sm:text-xl font-semibold text-[#204F8C]">
-              23 JUN – 27 JUN 2025
-            </h1>
-          </header>
-
-          <div className="outer">
-            <table className="w-full" role="grid">
-              <thead className="bg-white sticky top-0 z-10 shadow-sm">
-                <tr>
-                  <th className="w-20 p-4 text-center text-[#204F8C] text-[10px] md:text-xl" scope="col"></th>
-                  <th className="p-4 text-center text-[#204F8C] text-[8px] sm:text-xs md:text-base" scope="col">
-                    Seg, 23
-                  </th>
-                  <th className="p-4 text-center text-[#204F8C] text-[8px] sm:text-xs md:text-base" scope="col">
-                    Ter, 24
-                  </th>
-                  <th className="p-4 text-center text-[#204F8C] text-[8px] sm:text-xs md:text-base" scope="col">
-                    Qua, 25
-                  </th>
-                  <th className="p-4 text-center text-[#204F8C] text-[8px] sm:text-xs md:text-base" scope="col">
-                    Qui, 26
-                  </th>
-                  <th className="p-4 text-center text-[#204F8C] text-[8px] sm:text-xs md:text-base" scope="col">
-                    Sex, 27
-                  </th>
-                </tr>
-              </thead>
-            </table>
-
-            <div className="wrap overflow-y-auto" style={{ height: 'min(400px, 60vh)' }}>
-              <table className="w-full" role="grid">
-                <tbody>
-                  {Array.from({ length: 5 }).map((_, hourIndex) => {
-                    const hour = hourIndex + 18; // Começa às 18:00
-                    return (
-                      <tr key={hour}>
-                        <td className="headcol w-20 p-2 text-center text-gray-500 text-[8px] sm:text-xs md:text-base h-24" role="rowheader">
-                          {hour.toString().padStart(2, '0')}:00
-                        </td>
-                        {Array.from({ length: 5 }).map((_, day) => {
-                          const currentHour = hour;
-                          
-                          const hasEvent = (day === 0 && currentHour === 19) || 
-                                         (day >= 1 && day <= 3 && currentHour === 19) || 
-                                         (day === 4 && currentHour === 19);
-
-                          return (
-                            <td key={day} className="border border-gray-100 p-2 relative h-24" role="gridcell">
-                              {hasEvent && (
-                                <button
-                                  onClick={() => {
-                                    let eventDetails;
-                                    if (day === 0) {
-                                      eventDetails = (
-                                        <div>
-                                          <p className="text-sm mb-4">Abertura oficial do evento com autoridades e convidados</p>
-                                          <p className="text-sm mb-2">Local: Auditório Central da UEMS</p>
-                                          <p className="text-sm mb-4">Horário: 19:00</p>
-                                          <div className="mt-4 pt-4 border-t border-gray-200">
-                                            <h5 className="font-semibold text-[#A68521] mb-2">Festival de Dança</h5>
-                                            <p className="text-sm">Apresentações artísticas e culturais de grande diversidade e riqueza</p>
-                                          </div>
-                                        </div>
-                                      );
-                                      setSelectedEvent({
-                                        title: "Cerimônia de Abertura",
-                                        details: eventDetails
-                                      });
-                                    } else if (day === 4) {
-                                      eventDetails = (
-                                        <div className="space-y-4">
-                                          {mockLectures.map((oficina) => (
-                                            <div key={oficina.id} className="pb-4 border-b border-gray-200 last:border-0">
-                                              <h5 className="font-semibold text-[#A68521] mb-2">{oficina.title}</h5>
-                                              <p className="text-sm mb-1">Ministrante: {oficina.speaker}</p>
-                                              <p className="text-sm">Local: {oficina.location}</p>
-                                            </div>
-                                          ))}
-                                        </div>
-                                      );
-                                      setSelectedEvent({
-                                        title: "Oficinas Temáticas",
-                                        details: eventDetails
-                                      });
-                                    } else {
-                                      eventDetails = (
-                                        <div>
-                                          <p className="text-sm mb-4">Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos</p>
-                                          <p className="text-sm mb-2">Local: FAED</p>
-                                          <p className="text-sm">Horário: 19:00</p>
-                                        </div>
-                                      );
-                                      setSelectedEvent({
-                                        title: "Exposições de Estágios e TCC",
-                                        details: eventDetails
-                                      });
-                                    }
-                                  }}
-                                  className="event bg-[#204F8C] text-white p-2 rounded text-[8px] sm:text-xs md:text-base w-full h-full text-left hover:bg-[#1A4173] transition-colors"
-                                  aria-label={`Ver detalhes do evento: ${day === 0 ? "Cerimônia de Abertura" : day === 4 ? "Oficinas Temáticas" : "Exposições de Estágios e TCC"}`}
-                                >
-                                  <div className="font-semibold text-[8px] sm:text-xs md:text-base">
-                                    {day === 0 ? "Cerimônia de Abertura" :
-                                     day === 4 ? "Oficinas Temáticas" :
-                                     "Exposições de Estágios e TCC"}
-                                  </div>
-                                  <div className="text-[6px] sm:text-xs md:text-sm opacity-75">
-                                    19:00 - {day === 0 ? "Auditório Central da UEMS" : "FAED"}
-                                  </div>
-                                </button>
-                              )}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <h1 className="text-2xl sm:text-3xl font-bold text-[#204F8C] mb-8 text-center">PROGRAMAÇÃO<br/>XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física<br/><span className="text-base font-normal">De 23 a 27 de junho de 2025</span></h1>
+        <div className="space-y-12">
+          {programacaoEvento.programacao.map((dia, idx) => (
+            <section key={dia.data || idx} className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#A68521] mb-4">{dia.dia_semana?.toUpperCase()} ({dia.data?.split('-').reverse().join('/')})</h2>
+              {/* Agrupar atividades por local */}
+              {(() => {
+                // Agrupar por local
+                const atividadesPorLocal: Record<string, any[]> = {};
+                dia.atividades.forEach(atv => {
+                  const local = atv.local || 'Outro';
+                  if (!atividadesPorLocal[local]) atividadesPorLocal[local] = [];
+                  atividadesPorLocal[local].push(atv);
+                });
+                const locais = Object.keys(atividadesPorLocal);
+                return locais.map((local, lidx) => (
+                  <div key={local+lidx} className="mb-8">
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#204F8C] mb-2">Local: {local}</h3>
+                    <div className="overflow-x-auto">
+                      <table className="min-w-full border border-gray-200 rounded-lg">
+                        <thead className="bg-gray-100">
+                          <tr>
+                            <th className="p-2 text-left text-xs sm:text-sm md:text-base font-bold text-[#204F8C]">Horário</th>
+                            <th className="p-2 text-left text-xs sm:text-sm md:text-base font-bold text-[#204F8C]">Atividade</th>
+                            <th className="p-2 text-left text-xs sm:text-sm md:text-base font-bold text-[#204F8C]">Descrição</th>
+                            <th className="p-2 text-left text-xs sm:text-sm md:text-base font-bold text-[#204F8C]">Participantes/Orientação</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {atividadesPorLocal[local]
+                            .sort((a, b) => (a.horario || '').localeCompare(b.horario || ''))
+                            .map((atv, aidx) => (
+                            <tr key={aidx} className="border-b last:border-0">
+                              <td className="p-2 align-top text-xs sm:text-sm md:text-base">{atv.horario || '-'}</td>
+                              <td className="p-2 align-top text-xs sm:text-sm md:text-base font-semibold">{atv.titulo}</td>
+                              <td className="p-2 align-top text-xs sm:text-sm md:text-base">{atv.descricao || '-'}</td>
+                              <td className="p-2 align-top text-xs sm:text-sm md:text-base">
+                                {atv.organizacao && <div><span className="font-bold">Organização:</span> {atv.organizacao}</div>}
+                                {atv.orientador && <div><span className="font-bold">Orientador(a):</span> {atv.orientador}</div>}
+                                {atv.arguidor && <div><span className="font-bold">Arguidor(a):</span> {atv.arguidor}</div>}
+                                {atv.arguidora && <div><span className="font-bold">Arguidora:</span> {atv.arguidora}</div>}
+                                {atv.avaliador && <div><span className="font-bold">Avaliador(a):</span> {atv.avaliador}</div>}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                ));
+              })()}
+            </section>
+          ))}
         </div>
       </div>
 

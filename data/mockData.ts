@@ -385,16 +385,18 @@ export const programacaoEvento = {
       data: "2025-06-23",
       atividades: [
         {
-          titulo: "Cerimônia de Abertura",
+          titulo: "Abertura do XI Seminário de Práticas de Ensino, Pesquisa e Extensão em Educação Física",
           descricao: "Abertura oficial do evento com autoridades e convidados",
           horario: "19:00",
-          local: "Auditório central da UEMS"
+          local: "Auditório Central da UEMS",
+          organizacao: "Dra. Jacqueline da Silva Nunes"
         },
         {
-          titulo: "Festival de Dança",
-          descricao: "Apresentações artísticas e culturais de grande diversidade e riqueza",
+          titulo: "Apresentações Artísticas, Culturais e Festival de Dança",
+          descricao: "Apresentações artísticas, culturais e festival de dança",
           horario: "Após a cerimônia",
-          local: "Auditório central da UEMS"
+          local: "Auditório Central da UEMS",
+          organizacao: "Dra. Jacqueline da Silva Nunes"
         }
       ]
     },
@@ -402,11 +404,180 @@ export const programacaoEvento = {
       dia_semana: "Terça-feira",
       data: "2025-06-24",
       atividades: [
+        // Sala 11 (FAED) - Estágio na Educação Escolar
         {
-          titulo: "Exposições de Estágios e TCC",
-          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          titulo: "Estágio na Educação Escolar",
+          descricao: "Apresentação dos relatórios de estágio supervisionado",
           horario: "19:00",
-          local: "FAED"
+          local: "Sala 11 (FAED)",
+          orientador: "Prof. Dr. Marcelo José Taques"
+        },
+        {
+          titulo: "Coordenação Pedagógica: Experiências de um Estágio",
+          descricao: "Jhenyffer Freire de Oliveira",
+          horario: "19:15",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Importância do Estágio Supervisionado na Educação Escolar: A Falta de Conhecimento de Acadêmicos e Gestores",
+          descricao: "Lucas Nugoli Zago",
+          horario: "19:30",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "A Importância da Secretaria Escolar e os Desafios no Atendimento em Libras",
+          descricao: "Déborah Oliveira da Costa",
+          horario: "19:45",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Estágio Gestão Escolar",
+          descricao: "Eva Gabriela Matos de Oliveira, Luana Thainá de Souza Andrade",
+          horario: "20:00",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Estágio na Gestão Escolar",
+          descricao: "Filipi Almeida da Silva",
+          horario: "20:15",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Estágio na Gestão Escolar",
+          descricao: "Ian Pedroso Gutierres, Luiz Fernando Alves Furtado",
+          horario: "20:30",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Desafios e Aprendizados na Prática de Estágio em Gestão Escolar",
+          descricao: "Adriele da Cunha Martins Luiz, Gabriel Henrique Castro Vieira",
+          horario: "20:45",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Relatório de Experiência do Estágio na Educação Escolar",
+          descricao: "Amanda Miranda da Silva, Ana Clara Duarte Pereyra",
+          horario: "21:00",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência em Estágio na Gestão Escolar",
+          descricao: "Maria Eduarda das Neves Silva",
+          horario: "21:15",
+          local: "Sala 11 (FAED)"
+        },
+        {
+          titulo: "Liderança e Gestão Democrática na Escola: Participação, Projeto Político-Pedagógico e Tomada de Decisão Coletiva",
+          descricao: "Beatriz Xavier Pederiva dos Santos",
+          horario: "21:30",
+          local: "Sala 11 (FAED)"
+        },
+        // Sala 02 (FAED) - Estágio no Ensino Fundamental - Anos Finais
+        {
+          titulo: "Estágio no Ensino Fundamental - Anos Finais",
+          descricao: "Apresentação dos relatórios de estágio supervisionado",
+          horario: "19:00",
+          local: "Sala 02 (FAED)",
+          arguidor: "Prof. Dr. Gustavo Levandoski"
+        },
+        {
+          titulo: "Impacto da Escassez de Materiais na Aprendizagem em Educação Física",
+          descricao: "Fernanda Guimarães Queiroz",
+          horario: "19:00",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "A Importância do Planejamento nas Aulas de Educação para a Diversificação dos Conteúdos",
+          descricao: "Lucas Nugoli Zago",
+          horario: "19:15",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Dificuldades Enfrentadas por Professores de Educação Física no Ensino Fundamental Anos Finais",
+          descricao: "Paulo Henrique Morais",
+          horario: "19:30",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Vivências e Reflexões no Estágio Supervisionado no Ensino Fundamental – Anos Finais",
+          descricao: "Vilmar Souza da Rocha",
+          horario: "19:45",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Desinteresse dos Estudantes pelas Aulas de Educação Física no Ensino Fundamental 2",
+          descricao: "Cassilda Ramos Morilha",
+          horario: "20:00",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Estágio no Ensino Fundamental e Suas Dificuldades",
+          descricao: "Emily Alves da Silva",
+          horario: "20:15",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "A Educação Física e os Desafios das Aulas Práticas sem Materiais Adequados",
+          descricao: "Ana Luiza Alves Figueredo",
+          horario: "20:30",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "O Papel do Professor na Inclusão e Motivação dos Alunos nas Aulas de Educação Física no Ensino Fundamental",
+          descricao: "Brenner Cesar Soares da Silva",
+          horario: "20:45",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "A Educação Física como Mecanismo de Inclusão, Estratégias e Práticas para os Anos Finais do Ensino Fundamental",
+          descricao: "José Henrique Reale Fonseca",
+          horario: "21:00",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Conteúdo de Lutas na Educação Física Escolar: Desafios e os Caminhos para Implementação nas Aulas",
+          descricao: "Juliana Maria da Silva",
+          horario: "21:15",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Saúde Mental, Desgaste Profissional e Burnout em Professores",
+          descricao: "Everton Alfonso, Maria Eduarda Mattoso Furigo",
+          horario: "21:30",
+          local: "Sala 02 (FAED)"
+        },
+        // Defesas de TCC - Sala 9 (FAED)
+        {
+          titulo: "Defesa de TCC: Produção do Conhecimento sobre Gênero, Sexualidade e Educação Física Escolar: Mapeando Experiências com Práticas Corporais e Esportivas",
+          descricao: "Acadêmica: Rafaela Vidal Cruz",
+          horario: "19:00",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Cássia Cristina Furlan",
+          avaliador: "Dr. Manuel Pacheco Neto, Mdo. Vinicius Montalvão Melo Zoffoli de Aguiar"
+        },
+        {
+          titulo: "Defesa de TCC: A Obesidade Infantil e a Importância do Profissional de Educação Física na Escola",
+          descricao: "Acadêmico: Luciano Pereira de Souza",
+          horario: "19:40",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Manuel Pacheco Neto",
+          avaliador: "Dr. Deyvid Tenner de Souza Rizzo, Dr. Mário Sérgio Vaz da Silva"
+        },
+        {
+          titulo: "Defesa de TCC: Exercícios Resistidos na Adolescência: Uma Revisão Narrativa",
+          descricao: "Acadêmica: Fernanda Guimarães Queiroz",
+          horario: "20:20",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Mário Sérgio Vaz da Silva",
+          avaliador: "Prof. Me. Leandro de Souza Silva, Prof. Esp. Vitor Vieira do Nascimento"
+        },
+        {
+          titulo: "Defesa de TCC: Impactos da Dança de Salão na Saúde Mental de Idosos Participantes de Bailes Dançantes na Cidade de Dourados/MS",
+          descricao: "Acadêmica: Juliana Maria da Silva",
+          horario: "Webconferência",
+          local: "Sala 9 (FAED)",
+          orientador: "Dra. Jacqueline da Silva Nunes",
+          avaliador: "Dra. Mineia Carvalho (UFMT), Dr. Neil Franco (UFJF)"
         }
       ]
     },
@@ -415,10 +586,166 @@ export const programacaoEvento = {
       data: "2025-06-25",
       atividades: [
         {
-          titulo: "Exposições de Estágios e TCC",
-          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          titulo: "Estágio na Educação Infantil e Anos Iniciais do Ensino Fundamental",
+          descricao: "Apresentação dos relatórios de estágio supervisionado",
           horario: "19:00",
-          local: "FAED"
+          local: "Sala 02 (FAED)",
+          orientador: "Prof. Dr. Manuel Pacheco Neto"
+        },
+        {
+          titulo: "A Discriminação das Alunas nas Aulas de Educação Física na Educação Infantil e nos Anos Iniciais do Ensino Fundamental na Escola Joãozinho Fernando",
+          descricao: "Cassilda Ramos Morilha",
+          horario: "19:00",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "A Importância da Afetividade no Relacionamento Professor-Aluno na Etapa da Educação Infantil nas Aulas de Educação Física",
+          descricao: "Lucas Nugoli Zago",
+          horario: "19:15",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Desafios e Vivências no Estágio Supervisionado em Educação Física: Inclusão, Motivação e Prática Pedagógica na Educação Infantil e Anos Iniciais",
+          descricao: "Luciano Pereira de Souza",
+          horario: "19:30",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Estágio na Educação Infantil e Anos Iniciais do Ensino Fundamental",
+          descricao: "Rafaela Vidal Cruz",
+          horario: "19:45",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Apontamentos sobre Estágio Supervisionado na Educação Infantil e Anos Iniciais do Ensino Fundamental",
+          descricao: "Leonardo Meira Nantes",
+          horario: "20:00",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Falta de Participação dos Alunos(as) nas Aulas de Educação Física",
+          descricao: "Paulo Victor Souza Moura",
+          horario: "20:15",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência do Estágio Supervisionado em Educação Física: Estágio no Ensino Fundamental - Anos Finais",
+          descricao: "Rafaela Vidal Cruz",
+          horario: "20:30",
+          local: "Sala 02 (FAED)"
+        },
+        {
+          titulo: "Estágio Gestão Escolar",
+          descricao: "Vitória Eduarda Ramos da Silva",
+          horario: "21:00",
+          local: "Sala 02 (FAED)"
+        },
+        // Sala 10 (FAED) - Estágio na Educação Escolar
+        {
+          titulo: "Estágio na Educação Escolar",
+          descricao: "Apresentação dos relatórios de estágio supervisionado",
+          horario: "19:00",
+          local: "Sala 10 (FAED)",
+          orientador: "Prof. Dr. Marcelo José Taques"
+        },
+        {
+          titulo: "Relato de Experiência de Estágio na Gestão Escolar",
+          descricao: "Danilo de Azevedo Goncalves",
+          horario: "19:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Gestão Escolar e Corresponsabilidade Familiar: Limites e Desafios no Processo Educativo",
+          descricao: "Eduardo de Souza Sozzi",
+          horario: "19:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Estágio Supervisionado de Gestão Escolar",
+          descricao: "Náthaly Simplício Schneider Marques, Erik Pereira da Costa",
+          horario: "19:30",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Formações Docentes na Rede Municipal e seus Impactos na Carga Horária Escolar: Um Relato de Estágio Supervisionado",
+          descricao: "Giovane Alexandre Martins Cano",
+          horario: "19:45",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Vivência na Gestão Escolar: Estágio Supervisionado nos Bastidores da Escola",
+          descricao: "Gustavo Fonseca da Silva",
+          horario: "20:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência",
+          descricao: "Larissa do Nascimento Gonçalves",
+          horario: "20:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Efeito Multiplicador: A Influência da Gestão em uma Cultura Escolar Inclusiva",
+          descricao: "Jong Jin de Carvalho Cançado",
+          horario: "20:30",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "O Diálogo entre a Família e a Escola.",
+          descricao: "Paulo Victor Souza Moura",
+          horario: "20:45",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Estágio Gestão Escolar",
+          descricao: "Marcos Eduardo Bronel Ribeiro",
+          horario: "21:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiências do Estágio Supervisionado na Gestão Escolar na Escola Presidente Vargas",
+          descricao: "Ryan Sousa Almeida Santos",
+          horario: "21:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência na Gestão Escolar",
+          descricao: "Maicon de Souza Oliveira, Williméri da Silva Lima",
+          horario: "21:30",
+          local: "Sala 10 (FAED)"
+        },
+        // Defesas de TCC - Sala 9 (FAED)
+        {
+          titulo: "Defesa de TCC: Centros de Equoterapia no Estado do Mato Grosso do Sul com Atendimentos a Pessoas com TEA",
+          descricao: "Acadêmica: Edilaine Oliveira Marques",
+          horario: "19:00",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Mário Sérgio Vaz da Silva",
+          avaliador: "Dra. Josiane FF de Freitas, Dr. Washington CS Nozu"
+        },
+        {
+          titulo: "Defesa de TCC: A Prática do Crossfit por uma Pessoa com Mielomeningocele",
+          descricao: "Acadêmico: Pedro Paulo Nunes de Lima",
+          horario: "19:40",
+          local: "Sala 9 (FAED)",
+          orientador: "Dra. Josiane Fujisawa Filus de Freitas",
+          avaliador: "Dr. Mário Sérgio Vaz da Silva, Dra. Juliana Maria da Silva Lima (FAEAD)"
+        },
+        {
+          titulo: "Defesa de TCC: A Qualidade de Vida de Mães de Crianças com TEA: Estudo Preliminar",
+          descricao: "Acadêmica: Ana Luiza Figueiredo",
+          horario: "20:20",
+          local: "Sala 9 (FAED)",
+          orientador: "Dra. Josiane Fujisawa Filus de Freitas",
+          avaliador: "Dr. Mário Sérgio Vaz da Silva, Ms. Wenis Vargas de Carvalho (FAEAD)"
+        },
+        {
+          titulo: "Defesa de TCC: Educação Física no Ensino Médio: A Importância de Conscientizar o Aluno para um Estilo de Vida Saudável",
+          descricao: "Acadêmico: Fabio Oliveira Pinzan",
+          horario: "21:00",
+          local: "Sala 9 (FAED)",
+          orientador: "Pablo Christiano B. Lollo",
+          avaliador: "Dr. Daniel Traina Gama, Dr. Marcelo José Taques"
         }
       ]
     },
@@ -427,10 +754,110 @@ export const programacaoEvento = {
       data: "2025-06-26",
       atividades: [
         {
-          titulo: "Exposições de Estágios e TCC",
-          descricao: "Apresentação de resultados de pesquisas, projetos e experiências práticas pelos alunos",
+          titulo: "Estágio no Ensino Médio e na Educação de Jovens e Adultos",
+          descricao: "Apresentação dos relatórios de estágio supervisionado",
           horario: "19:00",
-          local: "FAED"
+          local: "Sala 10 (FAED)",
+          arguidora: "Profa. Dra. Cássia Cristina Furlan"
+        },
+        {
+          titulo: "Pedagogia do Esporte: Uma Ferramenta de Transformação na Educação Física Escolar – Uma Análise do Estágio no Ensino Médio",
+          descricao: "Jonatan Fernando dos Santos, Diogo Henrique Nogueira Lima, Fabiano",
+          horario: "19:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Estágio no Ensino Médio e Suas Dificuldades",
+          descricao: "Emily Alves da Silva",
+          horario: "19:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "A Falta de Roupas Adequadas como Barreira à Prática de Atividades Físicas no Contexto Escolar",
+          descricao: "Renato dos Santos Parra",
+          horario: "19:30",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "O Papel do Professor na Inclusão e Motivação dos Alunos nas Aulas de Educação Física no Ensino Médio",
+          descricao: "Brenner Cesar Soares da Silva",
+          horario: "19:45",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Desinteresse nas Aulas de Educação Física e o Vaping entre Estudantes",
+          descricao: "Carlos André Fernandes Ribeiro Guarienti",
+          horario: "20:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "A Nova Era do Ensino, o Desinteresse e Interesse nas Aulas",
+          descricao: "Eduardo de Souza Sozzi",
+          horario: "20:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Saúde Mental, Desgaste Profissional e Burnout em Professores",
+          descricao: "Everton Martins Alfonso",
+          horario: "20:30",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Inclusão na Educação Física Escolar: Vivências no Estágio Supervisionado",
+          descricao: "Gustavo Fonseca da Silva",
+          horario: "20:45",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência de Estágio em Educação Física no Ensino Médio: Desafios e Soluções para a Motivação dos Alunos",
+          descricao: "Isabella Rodrigues da Silva",
+          horario: "21:00",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Reflexões sobre a Aprendizagem Motora na Pós-Pandemia: Vivências de Estágio no Ensino Médio da Escola Antônia da Silveira Capilé.",
+          descricao: "José Henrique Reale Fonseca",
+          horario: "21:15",
+          local: "Sala 10 (FAED)"
+        },
+        {
+          titulo: "Relato de Experiência do Estágio Supervisionado em Educação Física: Estágio no Ensino Médio e na Educação de Jovens e Adultos",
+          descricao: "Rafaela Vidal Cruz",
+          horario: "21:30",
+          local: "Sala 10 (FAED)"
+        },
+        // Defesas de TCC - Sala 9 (FAED)
+        {
+          titulo: "Defesa de TCC: O Esporte no Desenvolvimento Integral da Criança na Educação Infantil",
+          descricao: "Acadêmico: Carlos André Fernandes Ribeiro Guarienti",
+          horario: "19:00",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Deyvid Tenner de Souza Rizzo",
+          avaliador: "Dr. Marcelo José Taques, Dr. Gustavo Levandoski"
+        },
+        {
+          titulo: "Defesa de TCC: Análise das Ementas das Disciplinas Relacionadas às Atividades Aquáticas na Formação Inicial em Educação Física nas Universidades Federais do Mato Grosso do Sul",
+          descricao: "Acadêmico: Gustavo Fonseca da Silva",
+          horario: "19:40",
+          local: "Sala 9 (FAED)",
+          orientador: "Dr. Deyvid Tenner de Souza Rizzo",
+          avaliador: "Dr. Marcelo José Taques, Dr. Gustavo Levandoski"
+        },
+        {
+          titulo: "Defesa de TCC: Uso de Ergogênicos Devidos às Influências Digitais",
+          descricao: "Acadêmico: Eduardo de Souza Sozzi",
+          horario: "20:20",
+          local: "Sala 9 (FAED)",
+          orientador: "Pablo Christiano B. Lollo",
+          avaliador: "Dr. Daniel Traina Gama, Me. Luiz Fabiano Vilela de Almeida"
+        },
+        {
+          titulo: "Defesa de TCC: O Impacto da Pandemia COVID-19 no Desenvolvimento Motor Infantil",
+          descricao: "Acadêmica: Adriele da Cunha Martins Luiz",
+          horario: "21:00",
+          local: "Sala 9 (FAED)",
+          orientador: "Marcelo José Taques",
+          avaliador: "Dr. Manuel Pacheco Neto, Dra. Lindsei Brabec Mota Barreto"
         }
       ]
     },
@@ -443,6 +870,36 @@ export const programacaoEvento = {
           descricao: "Workshops práticos sobre diversos temas da Educação Física",
           horario: "19:00",
           local: "FAED"
+        },
+        {
+          titulo: "Introdução ao Beach Tennis",
+          descricao: "Treinador Jader Morilla",
+          horario: "19:00",
+          local: "Quadra de areia (ao lado do LABEF)"
+        },
+        {
+          titulo: "Nutrição Esportiva Aplicada à Hipertrofia e Redução de Massa Gorda",
+          descricao: "Dr. Pablo Christiano Barboso Lollo",
+          horario: "19:00",
+          local: "Laboratório de Educação Física Escolar - LABEF"
+        },
+        {
+          titulo: "Ginástica Rítmica",
+          descricao: "Profa. Paola Gouveia Schemberger Levandoski",
+          horario: "19:00",
+          local: "Laboratório de Atividades Rítmicas e Dança – LARDAN (LABEF)"
+        },
+        {
+          titulo: "Atividade Física Funcional",
+          descricao: "Profa. Karla Soares Bertuccini",
+          horario: "19:00",
+          local: "Quadra Poliesportiva – Unidade II da UFGD"
+        },
+        {
+          titulo: "Esportes de Aventura",
+          descricao: "Prof. Lucas da Silva Ferreira",
+          horario: "19:00",
+          local: "Espaço aberto ao lado do LABEF"
         }
       ]
     }
