@@ -1,7 +1,7 @@
 'use client';
 
-import { mockLectures, programacaoEvento } from '@/data/mockData';
-import { useState, Fragment } from 'react';
+import { programacaoEvento } from '@/data/mockData';
+import { useState } from 'react';
 
 export default function ProgramacaoPage() {
   const [selectedEvent, setSelectedEvent] = useState<null | {
@@ -9,16 +9,8 @@ export default function ProgramacaoPage() {
     details: React.ReactNode;
   }>(null);
 
-  // Função utilitária para mapear dias do evento para colunas do calendário
-  const diasEvento = [
-    '2025-06-23', // Segunda
-    '2025-06-24', // Terça
-    '2025-06-25', // Quarta
-    '2025-06-26', // Quinta
-    '2025-06-27', // Sexta
-  ];
-
   // Mapeia atividades por dia e horário
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const atividadesPorDiaEHora: Record<string, Record<string, any[]>> = {};
   programacaoEvento.programacao.forEach((dia) => {
     if (!dia.data) return;
@@ -39,8 +31,6 @@ export default function ProgramacaoPage() {
       }
     });
   });
-  // Ordenar horários
-  const todosHorarios = Array.from(horariosSet).sort();
 
   const EventModal = () => {
     if (!selectedEvent) return null;
@@ -81,7 +71,7 @@ export default function ProgramacaoPage() {
               <h2 className="text-xl sm:text-2xl font-bold text-[#A68521] mb-4">{dia.dia_semana?.toUpperCase()} ({dia.data?.split('-').reverse().join('/')})</h2>
               {/* Agrupar atividades por local */}
               {(() => {
-                // Agrupar por local
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const atividadesPorLocal: Record<string, any[]> = {};
                 dia.atividades.forEach(atv => {
                   const local = atv.local || 'Outro';

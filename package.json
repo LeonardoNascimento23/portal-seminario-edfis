@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "clean": "rm -rf .next out",
+    "clean": "rimraf .next out",
     "prebuild": "npm run clean"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.19.1",
     "lucide-react": "^0.511.0",
     "next": "14.1.0",
     "react": "^18.2.0",
@@ -36,6 +37,7 @@
     "eslint-config-next": "14.1.0",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
